@@ -1,0 +1,498 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--navy:#0d1b31;--orange:#ff9f00;--text:#0d1b31;--muted:#5d7697;--light:#f4f7fb;--border:#dce5f0;--white:#fff}
+html{scroll-behavior:smooth}
+body{font-family:Inter,Arial,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.navbar{height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 2.4%;position:sticky;top:0;z-index:100;background:rgba(244,247,251,.95);backdrop-filter:blur(14px)}
+.logo{font-size:22px;font-weight:800;letter-spacing:-1px}
+.nav-links{display:flex;gap:38px;margin-left:auto;margin-right:30px}
+.nav-links a{font-weight:600;color:#627896;transition:.25s}
+.nav-links a:hover{color:var(--navy)}
+.nav-wa{background:var(--orange);padding:14px 28px;border-radius:30px;font-weight:800;box-shadow:0 10px 25px rgba(255,159,0,.15)}
+.menu-btn{display:none;border:0;background:none;font-size:28px;color:var(--navy)}
+
+.hero{min-height:590px;background:var(--light);display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:65px 4.5% 75px;overflow:hidden}
+.hero-content{max-width:650px}
+.promo-pill{display:inline-block;border:1px solid var(--border);background:#fff;padding:7px 20px;border-radius:25px;font-size:14px;font-weight:700;margin-bottom:30px}
+.hero h1{font-size:clamp(52px,6vw,78px);line-height:1.07;letter-spacing:-4px;margin-bottom:25px}
+.hero-text{font-size:20px;color:var(--muted);max-width:620px;margin-bottom:28px}
+.hero-buttons{display:flex;gap:15px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:13px;padding:19px 30px;border-radius:35px;font-weight:800;letter-spacing:.2px;transition:.25s;cursor:pointer}
+.btn:hover,.package-btn:hover{transform:translateY(-2px)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-orange{background:var(--orange);color:#111;box-shadow:0 14px 35px rgba(255,159,0,.18)}
+.hero-points{display:flex;gap:45px;margin-top:35px;color:var(--muted)}
+.hero-points span:first-letter{color:var(--orange)}
+.hero-visual{position:relative;min-height:430px;display:flex;align-items:center;justify-content:center;background:#ededeb;border-radius:28px}
+.laptop{width:72%;position:relative;z-index:2}
+.screen{background:#111;border:9px solid #111;border-radius:12px 12px 4px 4px;padding:5px;box-shadow:0 18px 30px rgba(0,0,0,.2)}
+.screen:after{content:"";display:block;height:7px;background:#ddd;border-radius:0 0 5px 5px;margin:-5px}
+.mock-nav{height:25px;background:#10223b;color:#fff;display:flex;align-items:center;gap:11px;padding:0 10px;font-size:5px}
+.mock-nav b{margin-right:auto}.mock-nav i{background:var(--orange);padding:3px 6px;border-radius:5px;font-style:normal}
+.mock-main{background:#f6f6f4;min-height:170px;padding:24px;display:flex;justify-content:space-between;align-items:center}
+.mock-main small{font-size:6px;color:#777}.mock-main h3{font-size:19px;line-height:1.05;margin:7px 0}.mock-main button,.preview-screen button{border:0;background:var(--orange);font-size:6px;padding:5px 8px;border-radius:4px}
+.mock-card{width:42%;background:#fff;padding:7px;border-radius:5px}.mock-photo{height:70px;background:linear-gradient(135deg,#ddd,#b8a38b);border-radius:4px}.mock-lines{padding:7px}.mock-lines b,.mock-lines i{display:block;height:4px;background:#dfe5ec;margin:3px 0}.mock-lines b{width:65%}
+.laptop-base{width:112%;height:15px;background:linear-gradient(#bbb,#eee);margin-left:-6%;border-radius:0 0 20px 20px;box-shadow:0 9px 13px rgba(0,0,0,.2)}
+.phone{position:absolute;right:13%;bottom:72px;width:100px;height:190px;background:#111;border:5px solid #111;border-radius:17px;padding:13px 7px;color:#fff;z-index:3;box-shadow:0 15px 25px rgba(0,0,0,.2)}
+.phone-top{height:4px;width:28px;background:#555;border-radius:10px;margin:0 auto 14px}.phone small{font-size:5px;color:var(--orange)}.phone h4{font-size:13px;line-height:1.1;margin:5px 0 9px}.phone-image{height:65px;background:linear-gradient(135deg,#d8c8b8,#eee);border-radius:5px}.phone button{border:0;background:var(--orange);font-size:6px;padding:5px 10px;border-radius:10px;margin-top:8px}
+
+.section{padding:100px 4.5%}
+.light-section{background:var(--light)}
+.section-heading{text-align:center;max-width:800px;margin:0 auto 48px}.section-heading h2{font-size:clamp(38px,4vw,58px);line-height:1.1;letter-spacing:-2.5px}.section-heading p{color:var(--muted);font-size:16px;margin-top:14px}
+.pricing-grid{max-width:1040px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:22px}.price-card{position:relative;background:#fff;border:1px solid var(--border);border-radius:20px;padding:38px;box-shadow:0 15px 35px rgba(13,27,49,.05)}.price-card.premium{background:var(--navy);color:#fff;border-color:var(--navy)}.popular{position:absolute;right:30px;top:-12px;background:var(--orange);color:#111;font-size:11px;font-weight:800;padding:6px 17px;border-radius:20px}.package-name{color:var(--orange);font-size:13px;font-weight:800;letter-spacing:3px}.package-desc{color:var(--muted);font-size:13px;margin:8px 0 22px}.premium .package-desc{color:#b9c3d0}.price{display:flex;align-items:baseline;gap:10px}.price del{color:#7d8793;font-size:16px}.price strong{font-size:54px;line-height:1;color:var(--orange);letter-spacing:-2px}.saving{display:inline-block;background:#fff1d7;color:#ff9700;padding:6px 13px;border-radius:20px;font-size:12px;font-weight:700;margin:18px 0 22px}.premium .saving{background:#393a34}.features{list-style:none;margin-bottom:25px}.features li{font-size:13px;margin:10px 0}.features li:before{content:"✓";color:var(--orange);font-weight:800;margin-right:13px}.package-btn{display:flex;justify-content:center;align-items:center;gap:15px;width:100%;padding:15px;border-radius:30px;font-size:12px;font-weight:800;transition:.25s}.dark-btn{background:var(--navy);color:#fff}.orange-btn{background:var(--orange);color:#111}
+
+.why-grid,.process-grid,.portfolio-grid,.testimonial-grid{max-width:1060px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.info-card,.process-card,.testimonial{background:#fff;border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:0 12px 30px rgba(13,27,49,.04)}.icon{width:46px;height:46px;display:grid;place-items:center;background:#fff0d7;color:var(--orange);border-radius:15px;font-size:23px;margin-bottom:22px}.info-card h3,.process-card h3{font-size:17px;margin-bottom:7px}.info-card p,.process-card p{font-size:13px;color:var(--muted)}.process-card span{display:block;color:#f9dfad;font-size:34px;font-weight:500;margin-bottom:8px}.process-card{min-height:175px}
+.portfolio-card{background:#fff;border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 12px 30px rgba(13,27,49,.05)}.site-preview{height:185px;padding:30px 35px;background:#efefed;display:grid;place-items:center}.preview-screen{width:88%;height:105px;border-radius:5px;background:#11213a;color:#fff;padding:15px;box-shadow:0 12px 15px rgba(0,0,0,.15)}.preview-screen b{font-size:5px;color:#fff}.preview-screen strong{display:block;font-size:13px;line-height:1.05;margin:9px 0}.preview-screen button{font-size:5px}.food .preview-screen{background:#111827}.food .preview-screen strong{color:#fff}.car .preview-screen{background:#f8e4a8;color:#10223b}.salon .preview-screen{background:#10223b}.contractor .preview-screen{background:#fff;color:#10223b}.beauty .preview-screen{background:#14243c}.shop .preview-screen{background:#111827}.portfolio-text{padding:20px 23px}.portfolio-text h3{font-size:17px}.portfolio-text p{font-size:13px;color:var(--muted)}
+.testimonial-grid{grid-template-columns:repeat(3,1fr)}.testimonial{min-height:185px}.stars{color:var(--orange);letter-spacing:3px;margin-bottom:12px}.testimonial p{font-size:13px;margin-bottom:20px}.testimonial b,.testimonial small{display:block}.testimonial b{font-size:12px}.testimonial small{color:var(--muted);font-size:11px}
+.faq-list{max-width:900px;margin:auto}.faq-item{background:#fff;border:1px solid var(--border);border-radius:17px;margin-bottom:12px;overflow:hidden}.faq-question{width:100%;border:0;background:none;padding:20px 23px;text-align:left;font:600 14px Inter;color:var(--navy);display:flex;justify-content:space-between;cursor:pointer}.faq-question span{color:var(--orange);font-size:19px}.faq-answer{display:none;padding:0 23px 20px;color:var(--muted);font-size:13px}.faq-item.active .faq-answer{display:block}.faq-item.active .faq-question span{transform:rotate(180deg)}
+.cta-section{padding:0 4.5% 90px}.cta-box{max-width:960px;margin:auto;background:var(--navy);color:#fff;text-align:center;border-radius:30px;padding:75px 25px;box-shadow:0 20px 45px rgba(13,27,49,.15)}.cta-box h2{font-size:clamp(35px,4vw,51px);line-height:1.12;letter-spacing:-2px}.cta-box p{color:#c4ccd7;margin:18px 0 30px}
+.footer{border-top:1px solid var(--border);padding:55px 6% 20px}.footer-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1.2fr 1fr;gap:40px}.footer h3{font-size:16px;margin-bottom:15px}.footer h4{font-size:13px;margin-bottom:15px}.footer p,.footer a{font-size:12px;color:var(--muted)}.footer p{max-width:270px}.footer a{display:block;margin:9px 0}.socials{display:flex;gap:10px;margin-top:15px}.socials a{width:34px;height:34px;background:var(--light);border-radius:50%;display:grid;place-items:center;color:var(--navy);font-weight:800}.copyright{max-width:1100px;margin:40px auto 0;padding-top:20px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}
+.floating-wa {
+  position: fixed;
+  right: 25px;
+  bottom: 22px;
+
+  width: 58px;
+  height: 58px;
+
+  background: #25D366;
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+
+  z-index: 90;
+
+  transition: 0.3s ease;
+}
+
+.floating-wa:hover {
+  transform: scale(1.08);
+  background: #20bd5a;
+}
+@media(max-width:900px){
+ .nav-links{gap:18px;margin-right:15px}.nav-wa{padding:11px 18px}
+ .hero{grid-template-columns:1fr;padding-top:50px}.hero-visual{min-height:360px}.hero h1{font-size:58px}
+ .why-grid,.process-grid,.portfolio-grid,.testimonial-grid{grid-template-columns:repeat(2,1fr)}
+ .footer-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:650px){
+ .navbar{height:70px;padding:0 20px}.logo{font-size:18px}.nav-wa{display:none}.menu-btn{display:block}.nav-links{position:absolute;top:70px;left:0;right:0;background:#fff;display:none;flex-direction:column;padding:20px 25px;gap:0;box-shadow:0 15px 25px rgba(0,0,0,.08)}.nav-links.open{display:flex}.nav-links a{padding:12px 0;border-bottom:1px solid var(--border)}
+ .hero{padding:45px 20px 60px}.hero h1{font-size:50px;letter-spacing:-3px}.hero-text{font-size:16px}.hero-buttons{flex-direction:column}.btn{width:100%}.hero-points{flex-direction:column;gap:8px;font-size:13px}.hero-visual{min-height:300px}.phone{right:7%;bottom:48px;width:75px;height:145px}.laptop{width:75%}.mock-main{min-height:120px;padding:12px}.mock-main h3{font-size:12px}.mock-card{width:40%}.mock-photo{height:48px}
+ .section{padding:75px 20px}.section-heading h2{font-size:40px}.pricing-grid,.why-grid,.process-grid,.portfolio-grid,.testimonial-grid{grid-template-columns:1fr}.price-card{padding:30px 25px}.price strong{font-size:47px}
+ .cta-section{padding:0 20px 70px}.cta-box{padding:55px 20px}.cta-box h2{font-size:35px}.footer{padding:45px 25px 20px}.footer-grid{grid-template-columns:1fr 1fr;gap:30px}.footer-grid>div:first-child{grid-column:1/-1}
+ .floating-wa{right:18px;bottom:18px}
+}
+
+<!-- PORTFOLIO -->
+<section class="section light-section" id="portfolio">
+
+  <div class="section-heading">
+    <h2>Website Yang Kami Boleh Bina</h2>
+    <p>Antara contoh website yang sesuai untuk pelbagai jenis bisnes.</p>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <!-- Restaurant -->
+    <article class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="images/restaurant.jpg" alt="Restaurant Website">
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">Lihat Website →</a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Restaurant</h3>
+        <p>Menu, lokasi & tempahan mudah.</p>
+      </div>
+    </article>
+
+
+    <!-- Car Workshop -->
+    <article class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="images/workshop.jpg" alt="Car Workshop Website">
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">Lihat Website →</a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Car Workshop</h3>
+        <p>Servis, harga & booking WhatsApp.</p>
+      </div>
+    </article>
+
+
+    <!-- Washing Machine Repair -->
+    <article class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="images/washing-repair.jpg" alt="Washing Machine Repair Website">
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">Lihat Website →</a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Washing Machine Repair</h3>
+        <p>Panggilan servis dalam satu klik.</p>
+      </div>
+    </article>
+
+
+    <!-- Contractor -->
+    <article class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="images/contractor.jpg" alt="Contractor Website">
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">Lihat Website →</a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Contractor</h3>
+        <p>Portfolio kerja & permintaan sebut harga.</p>
+      </div>
+    </article>
+
+
+    <!-- Salon -->
+    <article class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="images/salon.jpg" alt="Salon Website">
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">Lihat Website →</a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Salon</h3>
+        <p>Gallery rambut, harga & appointment.</p>
+      </div>
+    </article>
+
+
+    <!-- Online Business -->
+    <article class="portfolio-card">
+      <div class="portfolio-image">
+        <img src="images/online-business.jpg" alt="Online Business Website">
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">Lihat Website →</a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Online Business</h3>
+        <p>Katalog produk & order WhatsApp.</p>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+.portfolio-image {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover gambar */
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 27, 49, 0.75);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Bila hover */
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Button Lihat Website */
+.portfolio-overlay a {
+  background: #ff9f00;
+  color: #111111;
+
+  padding: 12px 20px;
+  border-radius: 25px;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  transition: transform 0.25s ease;
+}
+
+.portfolio-overlay a:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Portfolio text */
+.portfolio-text {
+  padding: 22px 24px;
+  background: #ffffff;
+}
+
+.portfolio-text h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.portfolio-text p {
+  font-size: 13px;
+  color: #5d7697;
+}
+
+
+/* Mobile */
+@media (max-width: 650px) {
+
+  .portfolio-image {
+    height: 210px;
+  }
+
+}
+
+<!-- PORTFOLIO -->
+<section class="section light-section" id="portfolio">
+
+  <div class="section-heading">
+    <h2>Website Yang Kami Boleh Bina</h2>
+    <p>Contoh website yang kami boleh bina untuk pelbagai jenis bisnes.</p>
+  </div>
+
+  <div class="portfolio-grid">
+
+    <!-- RESTAURANT -->
+    <article class="portfolio-card">
+
+      <div class="portfolio-image">
+        <img src="images/portfolio-restaurant.png" alt="Restaurant Website">
+
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">
+            Lihat Website →
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Restaurant</h3>
+        <p>Menu, lokasi & tempahan mudah.</p>
+      </div>
+
+    </article>
+
+
+    <!-- SALON -->
+    <article class="portfolio-card">
+
+      <div class="portfolio-image">
+        <img src="images/portfolio-salon.png" alt="Salon Website">
+
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">
+            Lihat Website →
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Salon</h3>
+        <p>Gallery, harga & appointment.</p>
+      </div>
+
+    </article>
+
+
+    <!-- WORKSHOP -->
+    <article class="portfolio-card">
+
+      <div class="portfolio-image">
+        <img src="images/portfolio-workshop.png" alt="Car Workshop Website">
+
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">
+            Lihat Website →
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Car Workshop</h3>
+        <p>Servis, harga & booking WhatsApp.</p>
+      </div>
+
+    </article>
+
+
+    <!-- WASHING MACHINE -->
+    <article class="portfolio-card">
+
+      <div class="portfolio-image">
+        <img src="images/portfolio-workshop.png" alt="Washing Machine Repair Website">
+
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">
+            Lihat Website →
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Washing Machine Repair</h3>
+        <p>Panggilan servis dalam satu klik.</p>
+      </div>
+
+    </article>
+
+
+    <!-- CONTRACTOR -->
+    <article class="portfolio-card">
+
+      <div class="portfolio-image">
+        <img src="images/portfolio-workshop.png" alt="Contractor Website">
+
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">
+            Lihat Website →
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Contractor</h3>
+        <p>Portfolio kerja & permintaan sebut harga.</p>
+      </div>
+
+    </article>
+
+
+    <!-- ONLINE BUSINESS -->
+    <article class="portfolio-card">
+
+      <div class="portfolio-image">
+        <img src="images/portfolio-salon.png" alt="Online Business Website">
+
+        <div class="portfolio-overlay">
+          <a href="#" target="_blank">
+            Lihat Website →
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-text">
+        <h3>Online Business</h3>
+        <p>Katalog produk & order WhatsApp.</p>
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+.portfolio-image {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  background: #eeeeee;
+}
+
+.portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-card:hover .portfolio-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-text {
+  padding: 22px 24px;
+  background: #fff;
+}
+
+.portfolio-text h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.portfolio-text p {
+  font-size: 13px;
+  color: #5d7697;
+}
+
+@media (max-width: 650px) {
+
+  .portfolio-image {
+    height: 210px;
+  }
+
+}
+
+.btn-orange {
+  background: #ff9f00;
+  color: #111111;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-orange i {
+  font-size: 22px;
+  color: #ffffff;
+}
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeec;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
